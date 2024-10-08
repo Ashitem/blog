@@ -1,5 +1,6 @@
 package com.ashitem.controller;
 
+import com.ashitem.domain.ResponseResult;
 import com.ashitem.domain.entity.Article;
 import com.ashitem.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +15,13 @@ import java.util.List;
 public class ArticleController {
     @Autowired
     private ArticleService articleService;
-    @GetMapping("/list")
-    public List<Article> test(){
-        return articleService.list();
-    }
+//    @GetMapping("/list")
+//    public List<Article> test(){
+//        return articleService.list();
+//    }
+@GetMapping("/hotArticleList")
+    public ResponseResult hotArticleList(){
+    ResponseResult result = articleService.hotArticleList();
+    return result;
+}
 }

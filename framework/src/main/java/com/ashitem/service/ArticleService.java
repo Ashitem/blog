@@ -1,5 +1,6 @@
 package com.ashitem.service;
 
+import com.ashitem.domain.ResponseResult;
 import com.ashitem.domain.entity.Article;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -12,4 +13,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface ArticleService extends IService<Article> {
 
+    ResponseResult hotArticleList();
 }
